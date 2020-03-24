@@ -5,9 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Studio Ghibli Delivery Service</title>
     <script src="app.js"></script>
-    <link rel="stylesheet" href='app.css'/>
+    <link rel="stylesheet" href='dee.css'/>
 </head>
 <body>
-    <h1>Studio Ghibli Delivery Service</h1>
+    <h1>Studio Ghibli's Delivery Service</h1>
+
+    <form method="POST" action="http://localhost:3000/villains">
+        <h3>Create User:</h3>
+        <input type="text" name="name" placeholder="Username">
+        <input type="password" name="password" placeholder="Password">
+
+        <input type="submit" value="Create User">
+    </form>
+
+    <form id="login" method="POST" action="http://localhost:3000/villains">
+        <h3>User Login:</h3>
+        <input type="text" name="name" placeholder="Username">
+        <input type="password" name="password" placeholder="Password">
+        
+        <input type="submit" value="Login">
+       
+    </form>
 </body>
 </html>

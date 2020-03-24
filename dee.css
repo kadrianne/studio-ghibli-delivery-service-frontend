@@ -1,0 +1,25 @@
+h1 {
+    text-align: center;
+    font-size: 60px;
+    font-family: fantasy;
+    font-weight: bold;
+
+    /* color: red; */
+     
+}
+
+#login {
+    font-family: fantasy;
+    font-weight: bold;
+    font-size: 25;
+    text-align: right;
+}
+
+/* #login {
+    display:flex;
+    flex-direction: row-reverse;
+} */
+
+body {
+    background-image: url("http://images6.fanpop.com/image/photos/39500000/My-Neighbor-Totoro-studio-ghibli-39569778-1024-768.jpg");
+}
