@@ -12,4 +12,6 @@ function addMovies(movies){
         movieCard.innerHTML = `<img src='${movie.image}' alt='${movie.title}'>`
         moviesList.append(movieCard)
     })
-}
+} 
+
+
