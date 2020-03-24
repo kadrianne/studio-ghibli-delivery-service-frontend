@@ -9,6 +9,8 @@ function addMovies(movies){
     movies.forEach(movie => {
         createCard(movie, moviesList)
     })
+
+
 }
 
 function createCard(movie, moviesList){
