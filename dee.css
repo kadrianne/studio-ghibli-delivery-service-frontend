@@ -2,7 +2,9 @@ h1 {
     text-align: center;
     font-size: 60px;
     font-family: fantasy;
-    font-weight: bold;
+    font-weight: bold; 
+    color: #de3859; 
+    text-shadow: 3px 3px black;
 
     /* color: red; */
      
@@ -20,6 +22,11 @@ h1 {
     flex-direction: row-reverse;
 } */
 
-body {
+/* body {
     background-image: url("http://images6.fanpop.com/image/photos/39500000/My-Neighbor-Totoro-studio-ghibli-39569778-1024-768.jpg");
-}
+}  */
+
+html { 
+    background: url("http://images6.fanpop.com/image/photos/39500000/My-Neighbor-Totoro-studio-ghibli-39569778-1024-768.jpg") no-repeat center center fixed; 
+    background-size: cover;
+  }
