@@ -58,5 +58,6 @@ function showWatchedMovies(watched_movies){
         watchedMovies.append(movieItem)
     })
 
+
     main.append(watchedMovies)
 }
