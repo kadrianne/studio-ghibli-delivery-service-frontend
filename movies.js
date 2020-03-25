@@ -36,14 +36,17 @@ function createCard(movie, moviesList){
 
 
 // Need to pass in users!!
+const searchParams = new URLSearchParams(window.location.search)
+const user_id = searchParams.get('user_id')
+
 function addToWatchList(movie, movieInfo){
-    movieInfo.innerHTML += `<form action='http://localhost:3000/unwatched_movies?user_id=1&movie_id=${movie.id}' method='POST'>
+    movieInfo.innerHTML += `<form action='http://localhost:3000/unwatched_movies?user_id=${user_id}&movie_id=${movie.id}' method='POST'>
         <input type="submit" value="Add to Watch List">
     </form>`
 }
 
 function addToWatchedMovies(movie, movieInfo){
-    movieInfo.innerHTML += `<form action='http://localhost:3000/watched_movies?user_id=1&movie_id=${movie.id}' method='POST'>
+    movieInfo.innerHTML += `<form action='http://localhost:3000/watched_movies?user_id=${user_id}&movie_id=${movie.id}' method='POST'>
         <input type="submit" value="I've watched this!">
     </form>`
 }
