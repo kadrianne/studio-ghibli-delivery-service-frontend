@@ -80,3 +80,13 @@ img {
 	justify-content: center;
 	margin: 1%; 
 }
+
+.movie-card {
+	display: flex;
+	width: 50%;
+}
+
+.movie-info {
+	display: flex;
+	flex-direction: column;
+}
