@@ -1,0 +1,120 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* END OF RESET */ 
+/* html {
+    background: linear-gradient(#f3e1dd, #e7a43f); 
+    background-size: cover; 
+} */
+
+body {
+	background: #f3e1dd; 
+} 
+
+h1 {
+	font-size: 65px; 
+	text-align: left;
+	font-family: fantasy;
+	color: #de3859; 
+	padding-top: 35px;
+	/*padding-bottom: 50px;*/
+	font-weight: bold; 
+	text-shadow: 3px 3px  #474544; 
+    margin-top: 20px;
+    margin-left: 20px;
+}  
+
+h2 {
+    font-size: 40px; 
+	text-align: left;
+	font-family: fantasy;
+	color: #474544; 
+	/*padding-top: 35px;*/
+	/*padding-bottom: 50px;*/
+	font-weight: bold; 
+	/*text-shadow: 3px 3px  #474544;*/ 
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+} 
+
+h3 {
+    font-family: fantasy;
+    color:  #474544;
+    font-size: 20px; 
+    margin-left: 20px;
+
+}
+
+a {
+    font-size: 30px; 
+    font-family: fantasy; 
+    text-align: left;
+    color: #8ac1e0; 
+    margin-left: 10px; 
+    margin-bottom: 20px;
+
+    text-shadow: 1px 1px  #474544;
+}
+
+ul {
+    display: flex; 
+	/*flex-flow: row wrap;*/ 
+	justify-content: center;
+	margin: 1%; 
+} 
+
+img {
+    width: 50%; 
+	box-shadow: 3px 3px 5px 6px #474544; 
+	margin-right: 15px; 
+	margin-left: 15px;
+    margin-bottom: 15px;  
+    margin-top: 15px;
+}
