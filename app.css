@@ -57,25 +57,27 @@ main {
 }
 
 h1 {
-	font-size: 60px; 
+	font-size: 65px; 
 	text-align: center;
 	font-family: fantasy;
 	color: #de3859; 
-	padding-top: 50px;
+	padding-top: 35px;
 	padding-bottom: 50px;
 	font-weight: bold; 
-	text-shadow: 3px 3px black;
-
-
+	text-shadow: 3px 3px  #474544; 
+	margin-top: 20px;
 }
 
 img {
 	width: 35%; 
-	box-shadow: 3px 3px 5px 6px #474544;
+	box-shadow: 3px 3px 5px 6px #474544; 
+	margin-right: 25px; 
+	margin-left: 25px;
+	margin-bottom: 25px;
 } 
 
 .row {
-	display:flex; 
+	display: flex; 
 	flex-flow: row wrap; 
 	justify-content: center;
 	margin: 1%; 
@@ -83,10 +85,49 @@ img {
 
 .movie-card {
 	display: flex;
-	width: 50%;
+	width: 50%; 
 }
 
 .movie-info {
 	display: flex;
-	flex-direction: column;
+	flex-direction: column; 
+} 
+
+.movie-title { 
+	font-size: 25px;
+	font-family: fantasy; 
+	margin-bottom: 5px; 
+	font-weight: bold; 
+	color:  #474544;
+} 
+
+.movie-release { 
+	font-size: 20px;
+	font-family: fantasy; 
+	margin-bottom: 5px;
+	color:  #474544; 
+	font-weight: bold; 
+} 
+
+.movie-director { 
+	font-size: 20px;
+	font-family: fantasy; 
+	margin-bottom: 5px; 
+	color:  #474544;
+	font-weight: bold; 
+} 
+.movie-description { 
+	font-size: 15px;
+	font-family: fantasy;
+	color:  #474544; 
+	font-weight: bold; 
 }
+
+input { 
+	font-weight: bold; 
+	font-size: 14px;
+	margin-top: 10px; 
+	box-shadow: 0px 0px 1px 1px #474544; 
+	background: #8ac1e0; 
+	font-family: fantasy;
+} 
