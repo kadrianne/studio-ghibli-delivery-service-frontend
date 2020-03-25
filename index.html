@@ -9,21 +9,20 @@
 </head>
 <body>
     <h1>Studio Ghibli's Delivery Service</h1>
+    <form method="POST" action="http://localhost:3000/users">
+        <h2 class="user">Create User:</h2>
+        <input class="create_user" type="text" name="user_name" placeholder="Username">
+        <input class="login" type="password" name="password" placeholder="Password">
 
-    <form method="POST" action="http://localhost:3000/villains">
-        <h3>Create User:</h3>
-        <input type="text" name="name" placeholder="Username">
-        <input type="password" name="password" placeholder="Password">
-
-        <input type="submit" value="Create User">
+        <input class="submit_button" type="submit" value="Create User">
     </form>
 
     <form id="login" method="GET" action="http://localhost:3000/login/">
-        <h3>User Login:</h3>
-        <input type="text" name="name" placeholder="Username">
-        <input type="password" name="password" placeholder="Password">
+        <h3 class="create_login">User Login:</h3>
+        <input class="login_text" type="text" name="name" placeholder="Username">
+        <input class="password_text" type="password" name="password" placeholder="Password">
         
-        <input type="submit" value="Login">
+        <input class="submit_button2" type="submit" value="Login">
        
     </form>
 </body>

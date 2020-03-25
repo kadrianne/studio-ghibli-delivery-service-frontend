@@ -1,32 +1,78 @@
+html { 
+    background: url("http://images6.fanpop.com/image/photos/39500000/My-Neighbor-Totoro-studio-ghibli-39569778-1024-768.jpg") no-repeat center center fixed; 
+    background-size: cover; 
+    margin-top: 30px
+  }
+
 h1 {
     text-align: center;
-    font-size: 60px;
+    font-size: 65px;
     font-family: fantasy;
     font-weight: bold; 
     color: #de3859; 
-    text-shadow: 3px 3px black;
-
-    /* color: red; */
-     
+    text-shadow: 3px 3px #474544;
+    margin-bottom: 0;    
 }
 
-#login {
+.user {
+    font-size: 40px;
+	font-family: fantasy; 
+	margin-bottom: 5px; 
+    color: #201f23;
+    font-weight: bold; 
+    text-shadow: 3px 3px #eae5e6;
+} 
+
+.create_login {
+    font-size: 40px;
+	font-family: fantasy; 
+	margin-bottom: 5px; 
+    color: #201f23;
+    font-weight: bold; 
+    text-shadow: 3px 3px #eae5e6;
+} 
+
+.create_user {
     font-family: fantasy;
-    font-weight: bold;
-    font-size: 25;
-    text-align: right;
+    font-size: 18px; 
+    box-shadow: 0px 0px 1px 1px #131212
+} 
+
+.login {
+    font-family: fantasy;
+    font-size: 18px; 
+    box-shadow: 0px 0px 1px 1px #131212
+} 
+
+.login_text {
+    font-family: fantasy;
+    font-size: 18px;
+    box-shadow: 0px 0px 1px 1px #131212
+} 
+
+.password_text {
+    font-family: fantasy;
+    font-size: 18px;
+    box-shadow: 0px 0px 1px 1px #131212
 }
 
-/* #login {
-    display:flex;
-    flex-direction: row-reverse;
-} */
+.submit_button {
+    font-weight: bold; 
+	font-size: 18px;
+	margin-top: 10px; 
+	box-shadow: 0px 0px 1px 1px #131212; 
+	background: #8ac1e0; 
+	font-family: fantasy;
+} 
 
-/* body {
-    background-image: url("http://images6.fanpop.com/image/photos/39500000/My-Neighbor-Totoro-studio-ghibli-39569778-1024-768.jpg");
-}  */
+.submit_button2 {
+    font-weight: bold; 
+	font-size: 18px;
+	margin-top: 10px; 
+	box-shadow: 0px 0px 1px 1px #131212; 
+	background: #8ac1e0; 
+	font-family: fantasy;
+}
 
-html { 
-    background: url("http://images6.fanpop.com/image/photos/39500000/My-Neighbor-Totoro-studio-ghibli-39569778-1024-768.jpg") no-repeat center center fixed; 
-    background-size: cover;
-  }
+
+
