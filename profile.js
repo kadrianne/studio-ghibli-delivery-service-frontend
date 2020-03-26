@@ -37,9 +37,21 @@ function showWatchList(unwatched_movies){
         message.innerText = "No movies added to this list yet!"
         watchList.append(message)
     } else {
-        userMovies.forEach(movie => {
+        userMovies.forEach(unwatchedMovie => {
             const movieItem = document.createElement('li')
-            movieItem.innerHTML = `<img src='${movie.movie.image}'>`
+            const removeButton = document.createElement('button')
+
+            movieItem.innerHTML = `<img src='${unwatchedMovie.movie.image}'>`
+            removeButton.innerText = 'Remove from Watch List'
+            
+            movieItem.append(removeButton)
+
+            removeButton.addEventListener('click', event => {
+                fetch(`http://localhost:3000/unwatched_movies/${unwatchedMovie.id}`, {
+                    method: 'DELETE'
+                })
+                location.reload()
+            })
             watchList.append(movieItem)
         })
     }
@@ -64,23 +76,28 @@ function showWatchedMovies(watched_movies){
         message.innerText = "No movies added to this list yet!"
         watchedMovies.append(message)
     } else {
-        userMovies.forEach(movie => {
+        userMovies.forEach(watchedMovie => {
             const movieItem = document.createElement('li')
-            movieItem.innerHTML = `<img src='${movie.movie.image}'>`
-            watchedMovies.append(movieItem)
+            const removeButton = document.createElement('button')
 
-            // removeWatchedMovie(movie, movieItem)
+            movieItem.innerHTML = `<img src='${watchedMovie.movie.image}'>`
+            removeButton.innerText = 'Remove from Movies I\'ve watched'
+            
+            movieItem.append(removeButton)
+
+            removeButton.addEventListener('click', event => {
+                fetch(`http://localhost:3000/watched_movies/${watchedMovie.id}`, {
+                    method: 'DELETE'
+                })
+                location.reload()
+            })
+
+            watchedMovies.append(movieItem)
 
         })
     }
-    main.append(watchedMovies)
+
+    main.append(watchedMovies);
 }
 
-// function removeWatchedMovie(movie, movieItem){
-//     movieItem.innerHTML += `<button type="submit" class="remove-button">Remove from Movies I've watched</button>`
-//     const removeButton = document.querySelector(".remove-button")
-//     removeButton.addEventListener('submit', function (event) {
-//     fetch(`http://localhost:3000/watched_movies?user_id=${userID}&movie_id=${movie.id}`, method: 'DELETE')
-//         .then(response => response.json())
-//     })
-// }
+
