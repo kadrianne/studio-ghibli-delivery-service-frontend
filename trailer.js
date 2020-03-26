@@ -10,6 +10,7 @@ function showInfo(movie) {
     const main = document.querySelector('main')
     const title = document.createElement('h2')
     const videoContainer = document.createElement('section')
+    const buttons = document.createElement('section')
     const moviesLink = document.createElement('a')
     
     title.innerText = movie.title
@@ -17,5 +18,28 @@ function showInfo(movie) {
     videoContainer.innerHTML = movie.trailer
     moviesLink.innerHTML = `<p><a href='movies.html?user_id=${userID}'>Back to Movies</a></p>`
 
-    main.append(title,videoContainer,moviesLink)
+    addToWatchList(movie,buttons)
+    addToWatchedMovies(movie,buttons)
+
+    main.append(title,videoContainer,buttons,moviesLink)
+}
+
+function addToWatchList(movie, buttons){
+    const unwatchedButton = document.createElement('form')
+
+    unwatchedButton.action = `http://localhost:3000/unwatched_movies?user_id=${userID}&movie_id=${movie.id}`
+    unwatchedButton.method = 'POST'
+    unwatchedButton.innerHTML = `<input type="submit" value="Add to Watch List">`
+
+    buttons.append(unwatchedButton)
+}
+
+function addToWatchedMovies(movie,buttons){
+    const watchedButton = document.createElement('form')
+
+    watchedButton.action = `http://localhost:3000/watched_movies?user_id=${userID}&movie_id=${movie.id}`
+    watchedButton.method = 'POST'
+    watchedButton.innerHTML = `<input type="submit" value="I've watched this!">`
+
+    buttons.append(watchedButton)
 }
