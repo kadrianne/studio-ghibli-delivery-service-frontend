@@ -21,7 +21,7 @@ function createCard(movie, moviesList){
     
     movieCard.className = 'movie-card'
     movieCard.innerHTML = `
-    <img src='${movie.image}' alt='${movie.title}'>
+    <img class="responsive" src='${movie.image}' alt='${movie.title}'>
     <section class='movie-info'>
         <p class='movie-title'>${movie.title}</p>
         <p class='movie-release'>${movie.release_date}</p>

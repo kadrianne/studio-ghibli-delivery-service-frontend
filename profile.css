@@ -59,7 +59,7 @@ body {
 
 h1 {
 	font-size: 65px; 
-	text-align: left;
+	text-align: center;
 	font-family: fantasy;
 	color: #de3859; 
 	padding-top: 35px;
@@ -72,7 +72,7 @@ h1 {
 
 h2 {
     font-size: 40px; 
-	text-align: left;
+	text-align: center;
 	font-family: fantasy;
 	color: #474544; 
 	/*padding-top: 35px;*/
@@ -99,9 +99,13 @@ a {
     color: #8ac1e0; 
     margin-left: 10px; 
     margin-bottom: 20px;
-
-    text-shadow: 1px 1px  #474544;
+	justify-content: center;
+	text-shadow: 1px 1px  #474544;
 }
+    
+
+
+
 
 ul {
     display: flex; 
@@ -117,4 +121,4 @@ img {
 	margin-left: 15px;
     margin-bottom: 15px;  
     margin-top: 15px;
-}
+} 
