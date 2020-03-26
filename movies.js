@@ -1,3 +1,6 @@
+const searchParams = new URLSearchParams(window.location.search)
+const user_id = searchParams.get('user_id')
+
 fetch('http://localhost:3000/movies')
     .then(response => response.json())
     .then(movies => addMovies(movies))
@@ -28,16 +31,12 @@ function createCard(movie, moviesList){
 
     const movieInfo = movieCard.querySelector('.movie-info')
 
+    watchTrailer(movie, movieInfo)
     addToWatchList(movie, movieInfo);
     addToWatchedMovies(movie, movieInfo);
     
     moviesList.append(movieCard)
 }
-
-
-// Need to pass in users!!
-const searchParams = new URLSearchParams(window.location.search)
-const user_id = searchParams.get('user_id')
 
 function addToWatchList(movie, movieInfo){
     movieInfo.innerHTML += `<form action='http://localhost:3000/unwatched_movies?user_id=${user_id}&movie_id=${movie.id}' method='POST'>
@@ -49,4 +48,8 @@ function addToWatchedMovies(movie, movieInfo){
     movieInfo.innerHTML += `<form action='http://localhost:3000/watched_movies?user_id=${user_id}&movie_id=${movie.id}' method='POST'>
         <input type="submit" value="I've watched this!">
     </form>`
+}
+
+function watchTrailer(movie, movieInfo){
+    movieInfo.innerHTML += `<button onclick="window.location='trailer.html?user_id=${user_id}&movie_id=${movie.id}';">Watch Trailer</button>`
 }
