@@ -73,7 +73,8 @@ img {
 	box-shadow: 3px 3px 5px 6px #474544; 
 	margin-right: 25px; 
 	margin-left: 25px;
-	margin-bottom: 25px;
+	margin-bottom: 25px; 
+	align-self: center;
 } 
 
 .row {
@@ -158,4 +159,5 @@ a {
 	color:  #474544; 
 	font-weight: bold;
 	text-align: center;
-}
+}  
+
