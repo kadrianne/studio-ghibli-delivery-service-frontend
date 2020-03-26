@@ -69,14 +69,6 @@ function showWatchedMovies(watched_movies){
             movieItem.innerHTML = `<img src='${movie.movie.image}'>`
             watchedMovies.append(movieItem)
 
- all_movies
-
-
-            // removeWatchedMovie(movie, movieItem)
-
-        })
-    }
- master
     main.append(watchedMovies)
 }
 
