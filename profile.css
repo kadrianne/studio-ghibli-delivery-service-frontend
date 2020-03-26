@@ -103,10 +103,6 @@ a {
 	text-shadow: 1px 1px  #474544;
 }
     
-
-
-
-
 ul {
     display: flex; 
 	/*flex-flow: row wrap;*/ 
@@ -114,11 +110,58 @@ ul {
 	margin: 1%; 
 } 
 
-img {
+img { 
+	display: flex; 
+	/*flex-flow: row wrap;*/ 
+	justify-content: center;
+	margin: 1%; 
     width: 50%; 
 	box-shadow: 3px 3px 5px 6px #474544; 
 	margin-right: 15px; 
-	margin-left: 15px;
+	/* margin-left: 15px; */
     margin-bottom: 15px;  
     margin-top: 15px;
 } 
+
+.trailer {
+	text-align: center;
+} 
+
+p {
+	text-align: center; 
+	font-family: fantasy;
+    color:  #474544;
+    font-size: 20px; 
+    margin-left: 20px;
+}  
+
+button { 
+	display: flex;  
+	justify-content: center;
+	font-weight: bold; 
+	font-size: 14px;
+	margin-top: 10px;
+	margin-left: 80px;
+	box-shadow: 0px 0px 1px 1px #474544; 
+	background: #8ac1e0; 
+	font-family: fantasy;
+	width: 200px;
+	height: 50px;
+}
+
+
+
+form {
+	text-align: center; 
+} 
+
+input { 
+	font-weight: bold; 
+	font-size: 14px;
+	margin-top: 10px; 
+	box-shadow: 0px 0px 1px 1px #474544; 
+	background: #8ac1e0; 
+	font-family: fantasy;
+	width: 150px; 
+	height: 30px;
+}
