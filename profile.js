@@ -81,7 +81,7 @@ function showWatchedMovies(watched_movies){
             const removeButton = document.createElement('button')
 
             movieItem.innerHTML = `<img src='${watchedMovie.movie.image}'>`
-            removeButton.innerText = 'Remove from Movies I\'ve watched'
+            removeButton.innerText = 'Remove from Watched Movies'
             
             movieItem.append(removeButton)
 

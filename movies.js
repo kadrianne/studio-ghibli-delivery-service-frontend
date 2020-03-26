@@ -1,5 +1,16 @@
 const searchParams = new URLSearchParams(window.location.search)
-const user_id = searchParams.get('user_id')
+const userID = searchParams.get('user_id')
+
+fetch(`http://localhost:3000/users/${userID}`)
+    .then(response => response.json())
+    .then(user => profileLink(user))
+
+function profileLink(user){
+    const header = document.querySelector('header')
+    const moviesLink = document.createElement('a')
+    moviesLink.innerHTML = `<a href='profile.html?user_id=${userID}'>Go to ${user.user_name}'s Profile</a>`
+    header.append(moviesLink)
+}
 
 fetch('http://localhost:3000/movies')
     .then(response => response.json())
@@ -32,24 +43,51 @@ function createCard(movie, moviesList){
     const movieInfo = movieCard.querySelector('.movie-info')
 
     watchTrailer(movie, movieInfo)
-    addToWatchList(movie, movieInfo);
-    addToWatchedMovies(movie, movieInfo);
+    checkMovieOnWatchList(movie, movieInfo)
+    checkMovieOnWatchedMovies(movie, movieInfo)
     
     moviesList.append(movieCard)
 }
 
+function checkMovieOnWatchList(movie, movieInfo){
+    fetch(`http://localhost:3000/unwatched_movies/`)
+    .then(response => response.json())
+    .then(unwatched_movies => {
+        const movieOnList = unwatched_movies.find(toWatch => toWatch.user_id == userID && toWatch.movie_id == movie.id)
+
+        if (movieOnList == undefined) {
+            addToWatchList(movie, movieInfo)
+        } else {
+            movieInfo.innerHTML += `<button disabled>Added to Watch List</button>`
+        }
+    })
+}
+
 function addToWatchList(movie, movieInfo){
-    movieInfo.innerHTML += `<form action='http://localhost:3000/unwatched_movies?user_id=${user_id}&movie_id=${movie.id}' method='POST'>
-        <input type="submit" value="Add to Watch List">
-    </form>`
+    movieInfo.innerHTML += `<form action='http://localhost:3000/unwatched_movies?user_id=${userID}&movie_id=${movie.id}' method='POST'>
+        <input type="submit" value="Add to Watch List"></form>`
+}
+
+function checkMovieOnWatchedMovies(movie, movieInfo){
+    fetch(`http://localhost:3000/watched_movies/`)
+    .then(response => response.json())
+    .then(watched_movies => {
+        const movieOnList = watched_movies.find(watched => watched.user_id == userID && watched.movie_id == movie.id)
+
+        if (movieOnList == undefined) {
+            addToWatchedMovies(movie, movieInfo)
+        } else {
+            movieInfo.innerHTML += `<button disabled>Added to Watched Movies</button>`
+        }
+    })
 }
 
 function addToWatchedMovies(movie, movieInfo){
-    movieInfo.innerHTML += `<form action='http://localhost:3000/watched_movies?user_id=${user_id}&movie_id=${movie.id}' method='POST'>
-        <input type="submit" value="I've watched this!">
-    </form>`
-}
+    movieInfo.innerHTML += `<form action='http://localhost:3000/watched_movies?user_id=${userID}&movie_id=${movie.id}' method='POST'>
+        <input type="submit" value="I've watched this!"></form>`
+    }
 
 function watchTrailer(movie, movieInfo){
-    movieInfo.innerHTML += `<button onclick="window.location='trailer.html?user_id=${user_id}&movie_id=${movie.id}';">Watch Trailer</button>`
+    movieInfo.innerHTML += `<button onclick="window.location='trailer.html?user_id=${userID}&movie_id=${movie.id}';">Watch Trailer</button>`
 }
+
