@@ -96,8 +96,7 @@ function showWatchedMovies(watched_movies){
 
         })
     }
-
-    main.append(watchedMovies);
+    main.append(watchedMovies)
 }
 
 
