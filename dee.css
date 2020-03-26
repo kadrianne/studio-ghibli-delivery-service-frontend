@@ -62,29 +62,34 @@ h1 {
     font-weight: bold; 
     color: #de3859; 
     text-shadow: 3px 3px #474544;
-    margin-bottom: 0;    
+    margin-bottom: 0;   
+    margin-top: 20px; 
 }
 
 .user {
-    font-size: 40px;
-	font-family: fantasy; 
-	margin-bottom: 5px; 
+    font-size: 35px;
+    font-family: fantasy; 
+    margin-top: 40px;
+    margin-bottom: 5px; 
+    margin-left: 30px;
     color: #201f23;
     font-weight: bold; 
     text-shadow: 3px 3px #eae5e6;
 } 
 
 .create_login {
-    font-size: 40px;
+    font-size: 35px;
 	font-family: fantasy; 
     margin-bottom: 5px; 
-    margin-top: 5px;
+    margin-top: 75px;
+    margin-left: 30px;
     color: #201f23;
     font-weight: bold; 
     text-shadow: 3px 3px #eae5e6;
 } 
 
-.create_user {
+.create_user { 
+    margin-left: 30px;
     font-family: fantasy;
     font-size: 18px; 
     box-shadow: 0px 0px 1px 1px #131212
@@ -98,8 +103,9 @@ h1 {
 
 .login_text {
     font-family: fantasy;
-    font-size: 18px;
-    box-shadow: 0px 0px 1px 1px #131212
+    font-size: 18px; 
+    margin-left: 30px;
+    box-shadow: 0px 0px 1px 1px #131212  
 } 
 
 .password_text {
@@ -124,7 +130,11 @@ h1 {
 	box-shadow: 0px 0px 1px 1px #131212; 
 	background: #8ac1e0; 
 	font-family: fantasy;
-}
+} 
+
+::placeholder {
+    background: #ffffed;
+  }
 
 
 
