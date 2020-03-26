@@ -123,13 +123,14 @@ img {
 	font-weight: bold; 
 }
 
-input { 
+input, button { 
 	font-weight: bold; 
 	font-size: 14px;
 	margin-top: 10px; 
 	box-shadow: 0px 0px 1px 1px #474544; 
 	background: #8ac1e0; 
 	font-family: fantasy;
+	width: 150px;
 } 
 
 
