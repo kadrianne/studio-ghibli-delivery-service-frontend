@@ -52,9 +52,16 @@ body {
 	background: #f3e1dd; 
 }
 
+header {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
 main {
     display: flex;
 }
+
 
 h1 {
 	font-size: 65px; 
@@ -131,7 +138,7 @@ input, button {
 	box-shadow: 0px 0px 1px 1px #474544; 
 	background: #8ac1e0; 
 	font-family: fantasy;
-	width: 150px;
+	width: 200px;
 } 
 
 
