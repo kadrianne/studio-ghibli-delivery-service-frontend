@@ -50,7 +50,8 @@ table {
 /* END OF RESET */ 
 
 body {
-	background: #f3e1dd; 
+	background: #f3e1dd;
+	font-family: fantasy, serif;
 }
 
 #login-page { 
@@ -72,7 +73,6 @@ main {
 h1 {
 	font-size: 65px; 
 	text-align: center;
-	font-family: fantasy;
 	color: #de3859; 
 	padding-top: 35px;
 	padding-bottom: 35px;
@@ -84,7 +84,6 @@ h1 {
 h2 {
 	font-size: 36px; 
 	text-align: center;
-	font-family: fantasy;
 	font-weight: bold;
 	margin-bottom: 20px;
 	color: #201f23;
@@ -94,7 +93,6 @@ h2 {
 
 h3 {
 	font-size: 24px;
-	font-family: fantasy;
 	text-align: center;
 	color: #de3859; 
 	font-weight: bold; 
@@ -154,42 +152,38 @@ img {
 } 
 
 .movie-title { 
-	font-size: 25px;
-	font-family: fantasy; 
+	font-size: 25px; 
 	margin-bottom: 5px;
 	font-weight: bold; 
 	color:  #474544;
 } 
 
 .movie-release { 
-	font-size: 20px;
-	font-family: fantasy; 
+	font-size: 20px; 
 	margin-bottom: 5px;
 	color:  #474544; 
 	font-weight: bold; 
 } 
 
 .movie-director { 
-	font-size: 20px;
-	font-family: fantasy; 
+	font-size: 20px; 
 	margin-bottom: 5px; 
 	color:  #474544;
 	font-weight: bold; 
 } 
 .movie-description { 
 	font-size: 15px;
-	font-family: fantasy;
 	color:  #474544; 
 	font-weight: bold; 
 }
 
 input, button { 
 	font-weight: bold; 
+	font-family: fantasy, serif;
 	font-size: 14px;
 	margin: 10px 5px 0px 0px;
 	box-shadow: 0px 0px 1px 1px #474544; 
 	background: #8ac1e0; 
-	font-family: fantasy;
 	width: 200px;
 }
 
@@ -216,26 +210,6 @@ input, button {
 	margin-bottom: 25px;
 }
 
-.create_user { 
-    margin-left: 30px;
-    font-family: fantasy;
-    font-size: 18px; 
-    box-shadow: 0px 0px 1px 1px #131212
-} 
-
-.login {
-    font-family: fantasy;
-    font-size: 18px; 
-    box-shadow: 0px 0px 1px 1px #131212
-} 
-
-.login_text {
-    font-family: fantasy;
-    font-size: 18px; 
-    margin-left: 30px;
-    box-shadow: 0px 0px 1px 1px #131212  
-} 
-
 .text-field {
     font-family: fantasy;
 	font-size: 18px;
@@ -243,12 +217,12 @@ input, button {
 }
 
 .form-button {
-    font-weight: bold; 
+	font-weight: bold;
+	font-family: fantasy, serif; 
 	font-size: 18px;
 	margin-top: 10px; 
 	box-shadow: 0px 0px 1px 1px #131212; 
 	background: #8ac1e0; 
-	font-family: fantasy;
 }
 
 ::placeholder {
@@ -261,4 +235,4 @@ font-family: fantasy;
 color:  #474544;
 font-size: 20px; 
 margin-top: 10px;
-}  
+}
