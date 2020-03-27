@@ -46,7 +46,7 @@ Each 'Remove from Watch List' button, when clicked, deletes the corresponding mo
 Each 'Remove from Watched Movies' button, when clicked, deletes the corresponding movie from the user's 'Watched Movies' and refreshes the page. On the backend, the relationship is deleted between the user and movie from the watched_movies table in the database.
 
 # Acknowledgements
-## Authors
+## Creators
 Denise Magner: https://github.com/deerenae<br>
 Todd Carlson: https://github.com/toddster79<br>
 Kristine Du: https://github.com/kadrianne
