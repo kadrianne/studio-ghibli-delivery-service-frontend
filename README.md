@@ -7,6 +7,8 @@ This project was created by students from The Flatiron School - Denver for Modul
 HTML, CSS, JavaScript
 
 ## Features
+![](Studio_Ghibli_GIF.gif)
+
 ### Create Account/Login
 
 
