@@ -171,6 +171,14 @@ img {
 	color:  #474544;
 	font-weight: bold; 
 } 
+
+.movie-rating { 
+	font-size: 16px; 
+	margin-bottom: 5px; 
+	color:  #474544;
+	font-weight: bold; 
+} 
+
 .movie-description { 
 	font-size: 15px;
 	color:  #474544; 
