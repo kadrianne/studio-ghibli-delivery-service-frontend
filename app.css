@@ -67,7 +67,8 @@ header {
 }
 
 main {
-    display: flex;
+	display: flex;
+	min-height: 75vh;
 }
 
 h1 {
@@ -171,6 +172,14 @@ img {
 	color:  #474544;
 	font-weight: bold; 
 } 
+
+.movie-rating { 
+	font-size: 16px; 
+	margin-bottom: 5px; 
+	color:  #474544;
+	font-weight: bold; 
+} 
+
 .movie-description { 
 	font-size: 15px;
 	color:  #474544; 
@@ -235,4 +244,11 @@ font-family: fantasy;
 color:  #474544;
 font-size: 20px; 
 margin-top: 10px;
+}
+
+footer {
+	text-align: right;
+	margin: 25px 25px 25px 25px;
+	color: #3e6ba2;
+	font-weight: bold;
 }

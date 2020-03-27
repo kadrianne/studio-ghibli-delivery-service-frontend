@@ -37,6 +37,7 @@ function createCard(movie, moviesList){
         <p class='movie-title'>${movie.title}</p>
         <p class='movie-release'>${movie.release_date}</p>
         <p class='movie-director'>Director: ${movie.director}</p>
+        <p class='movie-rating'>Rating: ${movie.rating}%</p>
         <p class='movie-description'>${movie.summary}</p>
     </section>`
 
