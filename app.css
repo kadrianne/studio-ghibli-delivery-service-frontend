@@ -48,8 +48,15 @@ table {
 }
 
 /* END OF RESET */ 
+
 body {
 	background: #f3e1dd; 
+}
+
+#login-page { 
+	background: url("http://images6.fanpop.com/image/photos/39500000/My-Neighbor-Totoro-studio-ghibli-39569778-1024-768.jpg") no-repeat center center fixed; 
+	background-size: 100% 100%;
+	margin-top: 20px;
 }
 
 header {
@@ -62,26 +69,69 @@ main {
     display: flex;
 }
 
-
 h1 {
 	font-size: 65px; 
 	text-align: center;
 	font-family: fantasy;
 	color: #de3859; 
 	padding-top: 35px;
-	padding-bottom: 50px;
+	padding-bottom: 35px;
 	font-weight: bold; 
 	text-shadow: 3px 3px  #474544; 
 	margin-top: 20px;
 }
+
+h2 {
+	font-size: 36px; 
+	text-align: center;
+	font-family: fantasy;
+	font-weight: bold;
+	margin-bottom: 20px;
+	color: #201f23;
+    font-weight: bold; 
+    text-shadow: 3px 3px #ffffed;
+}
+
+h3 {
+	font-size: 24px;
+	font-family: fantasy;
+	text-align: center;
+	color: #de3859; 
+	font-weight: bold; 
+	text-shadow: 1px 1px  #474544; 
+}
+
+a {
+    font-size: 24px; 
+    font-family: fantasy; 
+    text-align: center;
+    color: #8ac1e0; 
+    margin-bottom: 20px;
+	justify-content: center;
+	text-shadow: 1px 1px  #474544;
+}
+
+.list-container {
+	display: flex;
+	justify-content: space-around;
+}
+
+.profile-list {
+	width: 50%;
+	display: flex; 
+	flex-direction: column;
+	/*flex-flow: row wrap;*/ 
+	/* justify-content: center; */
+}  
 
 img {
 	width: 35%; 
 	box-shadow: 3px 3px 5px 6px #474544; 
 	margin-right: 25px; 
 	margin-left: 25px;
-	margin-bottom: 25px; 
-	align-self: center;
+	margin-bottom: 10px;
+	margin-top: 25px;
+	/* align-self: center; */
 } 
 
 .row {
@@ -93,18 +143,20 @@ img {
 
 .movie-card {
 	display: flex;
-	width: 50%; 
+	width: 50%;
 }
 
 .movie-info {
 	display: flex;
-	flex-direction: column; 
+	flex-direction: column;
+	margin-top: 25px;
+	margin-right: 25px;
 } 
 
 .movie-title { 
 	font-size: 25px;
 	font-family: fantasy; 
-	margin-bottom: 5px; 
+	margin-bottom: 5px;
 	font-weight: bold; 
 	color:  #474544;
 } 
@@ -134,38 +186,79 @@ img {
 input, button { 
 	font-weight: bold; 
 	font-size: 14px;
-	margin-top: 10px; 
+	margin: 10px 5px 0px 0px;
 	box-shadow: 0px 0px 1px 1px #474544; 
 	background: #8ac1e0; 
 	font-family: fantasy;
 	width: 200px;
+}
+
+.movie-item { 
+	display: flex; 
+	align-items: center;
+	flex-direction: column;
+	margin-bottom: 10px;
+}
+
+#trailer-page {
+	display: flex;
+	flex-direction: column;
+}
+
+.trailer {
+	text-align: center;
+	margin-bottom: 25px
 } 
 
-
-
-
-h2 {
-	font-size: 36px; 
-	text-align: center;
-	font-family: fantasy;
-	color: #de3859; 
-	font-weight: bold; 
-	text-shadow: 2px 2px  #474544;
+.button-container {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 25px;
 }
 
-h3 {
-	font-size: 20px; 
-	font-family: fantasy;
-	color: #de3859; 
-	font-weight: bold; 
-	text-shadow: 1px 1px  #474544; 
+.create_user { 
+    margin-left: 30px;
+    font-family: fantasy;
+    font-size: 18px; 
+    box-shadow: 0px 0px 1px 1px #131212
+} 
+
+.login {
+    font-family: fantasy;
+    font-size: 18px; 
+    box-shadow: 0px 0px 1px 1px #131212
+} 
+
+.login_text {
+    font-family: fantasy;
+    font-size: 18px; 
+    margin-left: 30px;
+    box-shadow: 0px 0px 1px 1px #131212  
+} 
+
+.text-field {
+    font-family: fantasy;
+	font-size: 18px;
+    box-shadow: 0px 0px 1px 1px #131212
 }
 
-a {
-	font-size: 15px;
+.form-button {
+    font-weight: bold; 
+	font-size: 18px;
+	margin-top: 10px; 
+	box-shadow: 0px 0px 1px 1px #131212; 
+	background: #8ac1e0; 
 	font-family: fantasy;
-	color:  #474544; 
-	font-weight: bold;
-	text-align: center;
+}
+
+::placeholder {
+    background: #ffffed;
+  }
+
+ul > p {
+text-align: center; 
+font-family: fantasy;
+color:  #474544;
+font-size: 20px; 
+margin-top: 10px;
 }  
-

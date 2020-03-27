@@ -28,6 +28,8 @@ function getWatchList(){
 function showWatchList(unwatched_movies){
     const main = document.querySelector('main')
     const watchList = document.createElement('ul')
+    
+    watchList.className = 'profile-list'
     watchList.innerHTML = '<h3>My Watch List</h3>'
     
     const userMovies = unwatched_movies.filter(toWatch => toWatch.user_id == userID)
@@ -41,6 +43,7 @@ function showWatchList(unwatched_movies){
             const movieItem = document.createElement('li')
             const removeButton = document.createElement('button')
 
+            movieItem.className = 'movie-item'
             movieItem.innerHTML = `<img src='${unwatchedMovie.movie.image}'>`
             removeButton.innerText = 'Remove from Watch List'
             
@@ -67,6 +70,8 @@ function getWatchedMovies(){
 function showWatchedMovies(watched_movies){
     const main = document.querySelector('main')
     const watchedMovies = document.createElement('ul')
+    
+    watchedMovies.className = 'profile-list'
     watchedMovies.innerHTML = '<h3>Movies I\'ve Watched</h3>'
     
     const userMovies = watched_movies.filter(watched => watched.user_id == userID)
@@ -80,6 +85,7 @@ function showWatchedMovies(watched_movies){
             const movieItem = document.createElement('li')
             const removeButton = document.createElement('button')
 
+            movieItem.className = 'movie-item'
             movieItem.innerHTML = `<img src='${watchedMovie.movie.image}'>`
             removeButton.innerText = 'Remove from Watched Movies'
             

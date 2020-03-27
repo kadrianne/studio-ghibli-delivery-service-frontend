@@ -16,6 +16,7 @@ function showInfo(movie) {
     title.innerText = movie.title
     videoContainer.className = 'trailer'
     videoContainer.innerHTML = movie.trailer
+    buttons.className = 'button-container'
     moviesLink.innerHTML = `<p><a href='movies.html?user_id=${userID}'>Back to Movies</a></p>`
 
     addToWatchList(movie,buttons)
