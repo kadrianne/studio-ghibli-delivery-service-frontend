@@ -5,25 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Studio Ghibli Delivery Service</title>
     <script src="app.js"></script>
-    <link rel="stylesheet" href='dee.css'/>
+    <link rel="stylesheet" href='app.css'/>
 </head>
-<body>
+<body id='login-page'>
     <h1>Studio Ghibli's Delivery Service</h1>
-    <form method="POST" action="http://localhost:3000/users">
-        <h2 class="user">Create User:</h2>
-        <input class="create_user" type="text" name="user_name" placeholder="Username">
-        <input class="login" type="password" name="password" placeholder="Password">
-
-        <input class="submit_button" type="submit" value="Create User">
-    </form>
-
-    <form id="login" method="GET" action="http://localhost:3000/login/">
-        <h3 class="create_login">User Login:</h3>
-        <input class="login_text" type="text" name="name" placeholder="Username">
-        <input class="password_text" type="password" name="password" placeholder="Password">
-        
-        <input class="submit_button2" type="submit" value="Login">
-       
-    </form>
+    <main class='list-container'>
+        <form method="POST" action="http://localhost:3000/users">
+            <h2>Create User:</h2>
+            <input class="text-field" type="text" name="user_name" placeholder="Username">
+            <input class="text-field" type="password" name="password" placeholder="Password">
+            
+            <input class="form-button" type="submit" value="Create User">
+        </form>
+        <form id="login" method="GET" action="http://localhost:3000/login/">
+            <h2>User Login:</h2>
+            <input class="text-field" type="text" name="name" placeholder="Username">
+            <input class="text-field" type="password" name="password" placeholder="Password">
+            
+            <input class="form-button" type="submit" value="Login">
+        </form>
+    </main>
 </body>
 </html
