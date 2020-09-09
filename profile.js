@@ -15,25 +15,17 @@ function displayProfile(user){
     moviesLink.innerHTML = `<a href='movies.html?user_id=${userID}'>Back to Movies</a>`
     header.append(moviesLink)
     
-    getWatchList()
-    getWatchedMovies()
+    showWatchedMovies(user.watched_movies)
+    showWatchList(user.unwatched_movies)
 }
-    
-function getWatchList(){
-        fetch(`http://localhost:3000/unwatched_movies/`)
-        .then(response => response.json())
-        .then(unwatched_movies => showWatchList(unwatched_movies))
-    }
-    
-function showWatchList(unwatched_movies){
+        
+function showWatchList(userMovies){
     const main = document.querySelector('main')
     const watchList = document.createElement('ul')
     
     watchList.className = 'profile-list'
     watchList.innerHTML = '<h3>My Watch List</h3>'
     
-    const userMovies = unwatched_movies.filter(toWatch => toWatch.user_id == userID)
-
     if (userMovies.length == 0) {
         const message = document.createElement('p')
         message.innerText = "No movies added to this list yet!"
@@ -59,12 +51,6 @@ function showWatchList(unwatched_movies){
         })
     }
     main.append(watchList)
-}
-
-function getWatchedMovies(){
-    fetch(`http://localhost:3000/watched_movies/`)
-    .then(response => response.json())
-    .then(watched_movies => showWatchedMovies(watched_movies))
 }
 
 function showWatchedMovies(watched_movies){
